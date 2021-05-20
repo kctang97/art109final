@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Artist Bio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profiles.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Artist Bio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="profiles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="context">
+    <!-- <h2>Artist CV</h2> -->
+  </div>
+  <div class="btn">
+    <span class="fa fa-bars"></span>
+  </div>
+  <nav class="sideBar">
+    <header>
+      Menu
+    </header>
+    <ul>
+      <li><a href="index.html" style="text-decoration: none;"> Home </a></li>
+      <li>
+        <a href="#" class="photo-btn">Photos
+          <span class="fa fa-caret-down first"></span>
+        </a>
+        <ul class="photo-show">
+          <li><a href="photogallery.html" style="text-decoration: none;">Landscape Photo</a></li>
+          <li><a href="drawing.html" style="text-decoration: none;">Digital Drawing</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="prof-btn">Profiles
+          <span class="fa fa-caret-down second"></span>
+        </a>
+        <ul class="prof-show">
+          <li><a href="statement.html" style="text-decoration: none;">Artist Statement</a></li>
+          <li><a href="bio.html" style="text-decoration: none;">Artist Bio</a></li>
+          <li><a href="cv.html" style="text-decoration: none;">CV</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" style="text-decoration: none;"> Contact </a></li>
+    </ul>
+  </nav>
+  <script>
+    $('.btn').click(function() {
+      $(this).toggleClass("click");
+      $('.sideBar').toggleClass("show");
+    });
+    $('.photo-btn').click(function() {
+      $('nav ul .photo-show').toggleClass("show");
+      $('nav ul .first').toggleClass("rotate");
+    });
+    $('.prof-btn').click(function() {
+      $('nav ul .prof-show').toggleClass("show1");
+      $('nav ul .second').toggleClass("rotate");
+    });
+
+    $('nav ul li').click(function() {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+  </script>
+
+  <div class="area">
+    <h1>Artist Bio</h1>
+    <h3 class="text">Kaicong Tang | Bio</h3>
+    <br>
+    <p>Chinese digital artist, and the first generation in the family pursuing Art practice.
+      Kaicong is currently graduating from San Jose State University with a BFA degree in Digital Media Art.
+      He is interested in making digital illustrations that explore human emotion and feeling in a particular environment.
+      His work of art will be using himself as a reference in illustrating the narrative digitally.
+      In the future, his works will continue to expand and collaborate with 3D sculptures and the environment.</p>
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+
 </html>
