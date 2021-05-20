@@ -166,8 +166,14 @@ nav ul ul{
 nav ul .photo-show.show{
   display: block;
 }
+
 /* dropdown */
-nav ul .prof-show.show1{
+nav ul .video-show.show1{
+  display: block;
+}
+
+/* dropdown */
+nav ul .prof-show.show2{
   display: block;
 }
 

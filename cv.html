@@ -36,8 +36,16 @@
         </ul>
       </li>
       <li>
-        <a href="#" class="prof-btn">Profiles
+        <a href="#" class="video-btn">Videos
           <span class="fa fa-caret-down second"></span>
+        </a>
+        <ul class="video-show">
+          <li><a href="animation.html" style="text-decoration: none;">Short animation</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="prof-btn">Profiles
+          <span class="fa fa-caret-down third"></span>
         </a>
         <ul class="prof-show">
           <li><a href="statement.html" style="text-decoration: none;">Artist Statement</a></li>
@@ -57,9 +65,13 @@
       $('nav ul .photo-show').toggleClass("show");
       $('nav ul .first').toggleClass("rotate");
     });
+    $('.video-btn').click(function() {
+      $('nav ul .video-show').toggleClass("show1");
+      $('nav ul .seond').toggleClass("rotate");
+    });
     $('.prof-btn').click(function() {
-      $('nav ul .prof-show').toggleClass("show1");
-      $('nav ul .second').toggleClass("rotate");
+      $('nav ul .prof-show').toggleClass("show2");
+      $('nav ul .third').toggleClass("rotate");
     });
 
     $('nav ul li').click(function() {
