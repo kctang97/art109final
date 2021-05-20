@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Holiday Series</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="holiday.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<style>
+  *,
+  *::before,
+  *::after {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  html {
+    font-family: 'Exo', sans-serif;
+    font-size: 10px;
+  }
+
+  body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Exo', sans-serif;
+    display: flex;
+  }
+</style>
+
+<body>
+  <div class="context">
+    <!-- <h2>Artist CV</h2> -->
+  </div>
+
+  <div class="btn">
+    <span class="fa fa-bars"></span>
+  </div>
+  <nav class="sideBar">
+    <header>
+      Menu
+    </header>
+    <ul>
+      <li><a href="index.html" style="text-decoration: none;"> Home </a></li>
+      <li>
+        <a href="#" class="photo-btn">Personal Works
+          <span class="fa fa-caret-down first"></span>
+        </a>
+        <ul class="photo-show">
+          <li><a href="photo.html" style="text-decoration: none;">Photos</a></li>
+          <li><a href="drawing.html" style="text-decoration: none;">Drawings</a></li>
+          <li><a href="series.html" style="text-decoration: none;">Holiday Series</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="code-btn">Coding Projects
+          <span class="fa fa-caret-down fourth"></span>
+        </a>
+        <ul class="code-show">
+          <li><a href="playable.html" style="text-decoration: none;">Playble</a></li>
+          <li><a href="3d.html" style="text-decoration: none;">3D</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="video-btn">Videos
+          <span class="fa fa-caret-down second"></span>
+        </a>
+        <ul class="video-show">
+          <li><a href="animation.html" style="text-decoration: none;">Animations</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="prof-btn">Profiles
+          <span class="fa fa-caret-down third"></span>
+        </a>
+        <ul class="prof-show">
+          <li><a href="statement.html" style="text-decoration: none;">Artist Statement</a></li>
+          <li><a href="bio.html" style="text-decoration: none;">Artist Bio</a></li>
+          <li><a href="cv.html" style="text-decoration: none;">CV</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" style="text-decoration: none;"> Contact </a></li>
+    </ul>
+  </nav>
+  <script>
+    $('.btn').click(function() {
+      $(this).toggleClass("click");
+      $('.sideBar').toggleClass("show");
+    });
+    $('.photo-btn').click(function() {
+      $('nav ul .photo-show').toggleClass("show");
+      $('nav ul .first').toggleClass("rotate");
+    });
+    $('.video-btn').click(function() {
+      $('nav ul .video-show').toggleClass("show1");
+      $('nav ul .seond').toggleClass("rotate");
+    });
+    $('.prof-btn').click(function() {
+      $('nav ul .prof-show').toggleClass("show2");
+      $('nav ul .third').toggleClass("rotate");
+    });
+    $('.code-btn').click(function() {
+      $('nav ul .code-show').toggleClass("show3");
+      $('nav ul .fourth').toggleClass("rotate");
+    });
+    $('nav ul li').click(function() {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+  </script>
+
+  <div class="area">
+    <div class="container">
+      <div class="image-gallery">
+        <a href="assets/images/holiday series/bd.png" class="img-1"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/bd2.png" class="img-2"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/christmas_1.png" class="img-3"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/christmas.png" class="img-4"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/xmas_1.png" class="img-5"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/New year_2.png" class="img-6"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/New year_4.png" class="img-7"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/New year.png" class="img-8"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/New year_1.png" class="img-9"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/yuanxiao.png" class="img-10"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/yd.gif" class="img-11"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/yuandan.png" class="img-12"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/yuanxiao2.png" class="img-13"><i class="fa fa-search-plus"></i></a>
+        <a href="assets/images/holiday series/valentine.png" class="img-14"><i class="fa fa-search-plus"></i></a>
+      </div>
+    </div>
+  </div>
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+
+</html>
