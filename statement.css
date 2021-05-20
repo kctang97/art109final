@@ -155,7 +155,7 @@ nav ul li a{
 /* background */
 nav ul li.active a{
   color: #000000;
-  background-color: #e8cdb3;
+  background-color: #A2D5F2;
   border-left-color: #ffffff;
 }
 
@@ -178,6 +178,10 @@ nav ul .prof-show.show2{
   display: block;
 }
 
+nav ul .code-show.show3{
+  display: block;
+}
+
 nav ul ul li{
   line-height: 40px;
   border-bottom: none;
@@ -197,7 +201,7 @@ nav ul li.active ul li a{
 
 nav ul ul li a:hover{
   color:#000000!important;
-  background: #61a8b4!important;
+  background: #A2D5F2!important;
 }
 
 nav ul li a span{
@@ -240,7 +244,7 @@ nav ul li a span.rotate{
 
 /* background */
 .area {
-  background: #c9744f;
+  background: #ff7e67;
   overflow: hidden;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
   width: 100%;

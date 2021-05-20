@@ -65,7 +65,7 @@ p{
   text-align: center;
   background: #e8cdb3;
   border-radius: 3px;
-  z-index: 1;
+  z-index: 3;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   cursor: pointer;
   transition: left 0.5s ease;
@@ -73,16 +73,19 @@ p{
 
 .btn.click{
   left: 260px;
+  z-index: 3;
 }
 
 .btn span{
   color: #000;
   font-size: 28px;
   line-height: 45px;
+  z-index: 3;
 }
 
 .btn.click span::before{
   content: '\f00d';
+  z-index: 3;
 }
 
 /* second menu sample */
@@ -95,12 +98,12 @@ p{
   top: 0;
   left: -250px;
   background: #303030;
-  opacity: 0.9;
-  z-index: 1;
+  opacity: 0.95;
   overflow-x: hidden;
   overflow-y: hidden;
   transition: 0.5s;
   transition: left 0.5s ease;
+  z-index: 3;
 }
 
 .sideBar.show {
@@ -115,6 +118,7 @@ p{
   line-height: 70px;
   background: #000;
   user-select: none;
+  z-index: 3;
 }
 
 .sideBar ul a {
@@ -126,6 +130,7 @@ p{
   color: #ffffff;
   padding-left: 0;
   text-align: center;
+  z-index: 3;
 }
 
 nav ul{
@@ -133,11 +138,13 @@ nav ul{
   height: 100%;
   width: 100%;
   list-style: none;
+  z-index: 2;
 }
 
 nav ul li{
   line-height: 60px;
   border-bottom: 1px solid rgba(250,250,250, 0.5);
+  z-index: 2;
 }
 
 nav ul li a{
@@ -150,12 +157,14 @@ nav ul li a{
   display: block;
   width: 100%;
   border-left: 3px solid transparent;
+  z-index: 2;
 }
 /* background */
 nav ul li.active a{
   color: #000000;
-  background-color: #e8cdb3;
+  background-color: #A2D5F2;
   border-left-color: #ffffff;
+  z-index: 2;
 }
 
 nav ul ul{
@@ -177,26 +186,34 @@ nav ul .prof-show.show2{
   display: block;
 }
 
+nav ul .code-show.show3{
+  display: block;
+}
+
 nav ul ul li{
   line-height: 40px;
   border-bottom: none;
+  z-index: 2;
 }
 
 nav ul ul li a{
   font-size: 16px;
   color: #ffffff;
   padding-left: 80px;
+  z-index: 2;
 }
 
 nav ul li.active ul li a{
   color: #ffffff;
   background-color: #303030;
   border-left-color: transparent;
+  z-index: 2;
 }
 
 nav ul ul li a:hover{
   color:#000000!important;
-  background: #e8cdb3!important;
+  background: #A2D5F2!important;
+  z-index: 2;
 }
 
 nav ul li a span{
@@ -206,10 +223,12 @@ nav ul li a span{
   transform: translateY(-50%);
   font-size: 22px;
   transition: transform 0.5s;
+  z-index: 2;
 }
 
 nav ul li a span.rotate{
   transform: translateY(-50%) rotate(-180deg);
+  z-index: 2;
 }
 
 /* text in background area */
@@ -222,6 +241,7 @@ nav ul li a span.rotate{
   border: none;
   border-radius: 10px;
   box-shadow: 0 0px 20px rgba(100, 100, 100, 1)
+  z-index: 2;
 }
 
 .context h1 {
@@ -229,18 +249,19 @@ nav ul li a span.rotate{
   text-align: center;
   color: #fff;
   font-size: 50px;
+  z-index: 2;
 }
 
 .context h2 {
   padding: 5px 10px;
   color: #303030;
   font-size: 18px;
+  z-index: 2;
 }
 
 /* background */
 .area {
-  background: #c9744f;
-  /* overflow: hidden; */
+  background: #f7f3e9;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
   width: 100%;
   height: 100%;
@@ -253,7 +274,7 @@ nav ul li a span.rotate{
   left: 0;
   z-index: 0;
   width: 100%;
-  height: 200%;
+  height: 177%;
   overflow: hidden;
 }
 
@@ -263,7 +284,7 @@ nav ul li a span.rotate{
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, .5);
+  background: rgba(240, 89, 69, .5);
   animation: animate 25s linear infinite;
   bottom: -200px;
 }
@@ -345,28 +366,103 @@ nav ul li a span.rotate{
 
 @keyframes animate {
   0% {
-    transform: translateY(0) rotate(0deg);
+    transform: translateY(-500) rotate(0deg);
     opacity: 1;
     border-radius: 0;
   }
 
   100% {
-    transform: translateY(-1000px) rotate(720deg);
+    transform: translateY(-3000px) rotate(1080deg);
     opacity: 0;
     border-radius: 50%;
   }
 }
 
-
-/* images */
+/* The grid container */
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-areas:
+    'header header header header header header'
+    'left middle middle middle middle right'
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
   grid-gap: 20px;
-  padding: 20px;
+  z-index: 2;
 }
 
-.grid-container > div {
+.header {
+  border-style: solid #000421;
+  margin-top: 5%;
+  padding: 0;
+  background:#0f3057;
+  box-shadow: 0 10px 30px rgba(0,0,0,1);
+}
+
+.left,
+.middle,
+.right {
+  padding: 5px;
+  z-index: 2;
+  /* padding: 10px; */
+  /* height: 300px; /* Should be removed. Only for demonstration */ */
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+  z-index: 2;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+  box-shadow: 0 10px 30px rgba(0,0,0,1);
+  z-index: 2;
+  /* margin-top: 2%; */
+  /* margin-bottom: 5%; */
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+  z-index: 2;
+}
+
+/* Style the footer */
+.footer {
+  margin-top: 5%;
+  grid-area: footer;
+  background-color: black;
+  padding: 10px;
+  font-size: 25px;
   text-align: center;
-  font-size: 30px;
+  color: #fff;
+  margin: 0;
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas:
+      'header header header header header header'
+      'left left left left left left'
+      'middle middle middle middle middle middle'
+      'right right right right right right'
+      'footer footer footer footer footer footer';
+  }
+  z-index: 2;
+}
+
+img {
+  filter: grayscale(100%);
+  transition: 0.5s ease-in-out;
+  width: 200px;
+  height: 140px;
+  padding: 10px;
+  z-index: 2;
+}
+
+img:hover {
+  filter: grayscale(0%);
+  z-index: 2;
 }

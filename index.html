@@ -3,28 +3,111 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Final Project</title>
+  <title>Kaicong Tang | Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="script.js"></script>
+
 </head>
 
 <body>
   <div class="context">
     <!-- <h1>Final Project</h1> -->
   </div>
+  <!--SideBar Menu -->
+  <div class="context">
+    <!-- <h2>Artist CV</h2> -->
+  </div>
+  <div class="btn">
+    <span class="fa fa-bars"></span>
+  </div>
+  <nav class="sideBar">
+    <header>
+      Menu
+    </header>
+    <ul>
+      <li><a href="index.html" style="text-decoration: none;"> Home </a></li>
+      <li>
+        <a href="#" class="photo-btn">Personal Works
+          <span class="fa fa-caret-down first"></span>
+        </a>
+        <ul class="photo-show">
+          <li><a href="photo.html" style="text-decoration: none;">Photos</a></li>
+          <li><a href="drawing.html" style="text-decoration: none;">Drawings</a></li>
+          <li><a href="series.html" style="text-decoration: none;">Holiday Series</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="code-btn">Coding Projects
+          <span class="fa fa-caret-down fourth"></span>
+        </a>
+        <ul class="code-show">
+          <li><a href="playable.html" style="text-decoration: none;">Playble</a></li>
+          <li><a href="3d.html" style="text-decoration: none;">3D</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="video-btn">Videos
+          <span class="fa fa-caret-down second"></span>
+        </a>
+        <ul class="video-show">
+          <li><a href="animation.html" style="text-decoration: none;">Animations</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="prof-btn">Profiles
+          <span class="fa fa-caret-down third"></span>
+        </a>
+        <ul class="prof-show">
+          <li><a href="statement.html" style="text-decoration: none;">Artist Statement</a></li>
+          <li><a href="bio.html" style="text-decoration: none;">Artist Bio</a></li>
+          <li><a href="cv.html" style="text-decoration: none;">CV</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" style="text-decoration: none;"> Contact </a></li>
+    </ul>
+  </nav>
+  <script>
+    $('.btn').click(function() {
+      $(this).toggleClass("click");
+      $('.sideBar').toggleClass("show");
+    });
+    $('.photo-btn').click(function() {
+      $('nav ul .photo-show').toggleClass("show");
+      $('nav ul .first').toggleClass("rotate");
+    });
+    $('.video-btn').click(function() {
+      $('nav ul .video-show').toggleClass("show1");
+      $('nav ul .seond').toggleClass("rotate");
+    });
+    $('.prof-btn').click(function() {
+      $('nav ul .prof-show').toggleClass("show2");
+      $('nav ul .third').toggleClass("rotate");
+    });
+    $('.code-btn').click(function() {
+      $('nav ul .code-show').toggleClass("show3");
+      $('nav ul .fourth').toggleClass("rotate");
+    });
+    $('nav ul li').click(function() {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+  </script>
+  <!--Button Menu -->
   <div class="dropdown">
     <span>Personal Works</span>
     <div class="dropdown-content">
-      <a href="photogallery.html" style="text-decoration: none;">Landscape Photos</a>
-      <a href="drawing.html" style="text-decoration: none;">Digital Drawings</a>
+      <a href="photo.html" style="text-decoration: none;">Photos</a>
+      <a href="drawing.html" style="text-decoration: none;">Drawings</a>
+      <a href="series.html" style="text-decoration: none;">Holiday Series</a>
     </div>
   </div>
 
   <div class="dropdown1">
     <span>Coding Projects</span>
     <div class="dropdown1-content">
-      <a href="gallery.html" style="text-decoration: none;">Gallery</a>
+      <a href="playable.html" style="text-decoration: none;">Playable</a>
       <a href="3d.html" style="text-decoration: none;">3D</a>
     </div>
   </div>
@@ -32,7 +115,7 @@
   <div class="dropdown2">
     <span>Videos</span>
     <div class="dropdown2-content">
-      <a href="animation.html" style="text-decoration: none;">Short Animations</a>
+      <a href="animation.html" style="text-decoration: none;">Animations</a>
     </div>
   </div>
 

@@ -28,8 +28,18 @@
             <span class="fa fa-caret-down first"></span>
           </a>
           <ul class="photo-show">
-            <li><a href="photogallery.html" style="text-decoration: none;">Landscape Photo</a></li>
-            <li><a href="drawing.html" style="text-decoration: none;">Digital Drawing</a></li>
+            <li><a href="photo.html" style="text-decoration: none;">Photos</a></li>
+            <li><a href="drawing.html" style="text-decoration: none;">Drawings</a></li>
+            <li><a href="series.html" style="text-decoration: none;">Holiday Series</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="code-btn">Coding Projects
+            <span class="fa fa-caret-down fourth"></span>
+          </a>
+          <ul class="code-show">
+            <li><a href="playable.html" style="text-decoration: none;">Playble</a></li>
+            <li><a href="3d.html" style="text-decoration: none;">3D</a></li>
           </ul>
         </li>
         <li>
@@ -37,7 +47,7 @@
             <span class="fa fa-caret-down second"></span>
           </a>
           <ul class="video-show">
-            <li><a href="animation.html" style="text-decoration: none;">Short animation</a></li>
+            <li><a href="animation.html" style="text-decoration: none;">Animations</a></li>
           </ul>
         </li>
         <li>
@@ -70,7 +80,10 @@
         $('nav ul .prof-show').toggleClass("show2");
         $('nav ul .third').toggleClass("rotate");
       });
-
+      $('.code-btn').click(function() {
+        $('nav ul .code-show').toggleClass("show3");
+        $('nav ul .fourth').toggleClass("rotate");
+      });
       $('nav ul li').click(function() {
         $(this).addClass("active").siblings().removeClass("active");
       });
