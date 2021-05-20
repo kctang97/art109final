@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Artist CV</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" type="text/css" href="style2.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="script.js"></script>
+  <meta charset="utf-8">
+  <title>Artist CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="Profiles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="script.js"></script>
 </head>
 
 
@@ -15,67 +17,85 @@
   <div class="context">
     <!-- <h2>Artist CV</h2> -->
   </div>
-
-  <div class="sideBar">
+  <div class="btn">
+    <span class="fa fa-bars"></span>
+  </div>
+  <nav class="sideBar">
     <header>
       Menu
     </header>
-
     <ul>
+      <li><a href="index.html" style="text-decoration: none;"> Home </a></li>
       <li>
-        <div class="dropdown">
-        <span>Photos</span>
-        <div class="dropdown-content">
-          <a href="photogallery.html" style="text-decoration: none;">Landscape Photo</a>
-          <a href="drawing.html" style="text-decoration: none;">Digital Drawing</a>
-        </div>
+        <a href="#" class="photo-btn">Photos
+          <span class="fa fa-caret-down first"></span>
+        </a>
+        <ul class="photo-show">
+          <li><a href="photogallery.html" style="text-decoration: none;">Landscape Photo</a></li>
+          <li><a href="drawing.html" style="text-decoration: none;">Digital Drawing</a></li>
+        </ul>
       </li>
+      <li>
+        <a href="#" class="prof-btn">Profiles
+          <span class="fa fa-caret-down second"></span>
+        </a>
+        <ul class="prof-show">
+          <li><a href="statement.html" style="text-decoration: none;">Artist Statement</a></li>
+          <li><a href="bio.html" style="text-decoration: none;">Artist Bio</a></li>
+          <li><a href="cv.html" style="text-decoration: none;">CV</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" style="text-decoration: none;"> Contact </a></li>
     </ul>
 
-  </div>
+    </div>
+  </nav>
+  <script>
+    $('.btn').click(function() {
+      $(this).toggleClass("click");
+      $('.sideBar').toggleClass("show");
+    });
+    $('.photo-btn').click(function() {
+      $('nav ul .photo-show').toggleClass("show");
+      $('nav ul .first').toggleClass("rotate");
+    });
+    $('.prof-btn').click(function() {
+      $('nav ul .prof-show').toggleClass("show1");
+      $('nav ul .second').toggleClass("rotate");
+    });
+
+    $('nav ul li').click(function() {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+  </script>
 
   <div class="area">
+    <h1>CV</h1>
+    <h3>Kaicong Tang | Curriculum Vitae</h3>
+        <h5>Address: Alameda, California</h5>
+        <h5>Tel: (xxx) xxx-4578</h5>
+        <h5>Email: kt021415@gmail.com</h5>
+        <br>
+        <h4>Education:</h4>
+        <h5>
+          &nbsp;-&nbsp; 2021 BFA (pending), San Jose State University, SanJose, CA, (expected May 2021)
+        </h5>
+        <br>
+        <h4>Exhibition:</h4>
+        <h5>
+          &nbsp;-&nbsp; 2019 Group Exhibition, Documentary About Housing & My Life, My, Place, For You, Gallery 5, San Jose State University, San Jose, CA
+        </h5>
+        <h5>
+          &nbsp;-&nbsp; 2018 Group Exhibition, Found Material, Display Cabinet, San Jose State University, San Jose, CA
+        </h5>
+        <h5>
+          &nbsp;-&nbsp; 2018 Group Exhibition, Intro Digital Video, Gallery 8, San Jose State University, San Jose, CA
+        </h5>
+        <h5>
+          &nbsp;-&nbsp; 2020 Online Exhibition, BFA Exhibition, New Art City, San Jose State University
+        </h5>
+        <br>
     <ul class="circles">
-<!--
-      <div class="menu-btn">
-        <span class="openSlide">
-          <a href="#" onclick="openSideMenu()">
-            <svg width = "30" height = "30">
-              <path d = "M0,5 30,5" stroke="#303030" stroke-width="5"/>
-              <path d = "M0,14 30,14" stroke="#303030" stroke-width="5"/>
-              <path d = "M0,23 30,23" stroke="#303030" stroke-width="5"/>
-            </svg>
-          </a>
-        </span> -->
-        <!-- <ul class="navbarNav">
-          <div class="dropdown1">
-            <li><a href="index.html"> Home </a></li>
-          </div>
-          <div class="dropdown1">
-            <span>Profiles</span>
-            <div class="dropdown1-content">
-              <a href="bio.html" style="text-decoration: none;">Artist Bio</a>
-              <a href="statement.html" style="text-decoration: none;">Artist Statement</a>
-              <a href="cv.html" style="text-decoration: none;">Artist CV</a>
-            </div>
-          </div>
-        </ul> -->
-      <!-- </nav>
-
-      <div id="sideMenu" class="sideNav">
-        <a href="#" class="btnClose" onclick="closeSideMenu()">&times;</a>
-        <a href="index.html"> Home </a>
-      </div>
-
-      <div id="main">
-        <h1>slide menu</h1>
-      </div> -->
-
-
-      <!-- <h2>
-      <a href="bio.html">Artist Bio</a> &nbsp;&nbsp;-&nbsp;&nbsp;
-      <a href="cv.html">Artist CV</a>
-    </h2> -->
       <li></li>
       <li></li>
       <li></li>
@@ -88,78 +108,6 @@
       <li></li>
     </ul>
   </div>
-  <div class="content">
-    <div class="header">
-
-    </div>
-    <br>
-    <br>
-    <h4>
-      <a href="statement.html">Artist Statement</a> &nbsp;&nbsp;-&nbsp;&nbsp;
-      <a href="CV.html">CV</a>
-    </h4>
-    <br>
-    <br>
-    <div class="row">
-      <div class="column side" style=""></div>
-      <div class="column middle">
-        <h5>Kaicong Tang | Curriculum Vitae</h5>
-        <br>
-        <br>
-        <h7>
-          Address: Alameda, California <br>
-          Tel: (xxx) xxx-4578 <br>
-          Email: kt021415@gmail.com <br>
-          Web: https://kctang97.github.io/index.html <br>
-        </h7>
-        <br>
-        <br>
-        <br>
-        <h5>Education:</h5>
-        <br>
-        <h7>
-          &nbsp;-&nbsp; 2021  &nbsp;&nbsp;&nbsp;BFA (pending), San Jose State University, SanJose, CA, (expected May 2021)
-        </h7>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h5>Exhibition:</h5>
-        <br>
-        <h7>
-          &nbsp;-&nbsp; 2019  &nbsp;&nbsp;&nbsp;Group Exhibition, Documentary About Housing & My Life, My, Place, For You, Gallery 5, San Jose State University, San Jose, CA
-        </h7>
-        <br>
-        <br>
-        <br>
-        <h7>
-          &nbsp;-&nbsp; 2018  &nbsp;&nbsp;&nbsp;Group Exhibition, Found Material, Display Cabinet, San Jose State University, San Jose, CA
-        </h7>
-        <br>
-        <br>
-        <br>
-        <h7>
-          &nbsp;-&nbsp; 2018  &nbsp;&nbsp;&nbsp;Group Exhibition, Intro Digital Video, Gallery 8, San Jose State University, San Jose, CA
-        </h7>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h5>
-        <a href="image/CV/CV.pdf" target="blank">Curriculum Vitae.pdf</a>
-      </h5>
-      </div>
-      <div class="column side" style=""></div>
-    </div>
-  </div>
-
-    <footer class="footer">
-      <h4>&copy 2020 Kaicong Tang</h4>
-      <br>
-      <p>Email: kaicong.tang@sjsu.edu <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        kt021415@gmail.com</p>
-    </footer>
 </body>
 
 </html>
